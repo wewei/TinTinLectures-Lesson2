@@ -5,11 +5,6 @@
     "Lesson2": {
       "type": "motoko",
       "main": "src/Lesson2/main.mo"
-    },
-    "Lesson2_assets": {
-      "type": "assets",
-      "source": ["src/Lesson2_assets/assets"],
-      "dependencies": ["Lesson2"]
     }
   },
   "defaults": {
