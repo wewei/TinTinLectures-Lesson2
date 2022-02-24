@@ -1,6 +1,4 @@
-import Nat "mo:base/Nat";
 import Int "mo:base/Int";
-import Array "mo:base/Array";
 import Order "mo:base/Order";
 
 module {
@@ -40,5 +38,4 @@ module {
   public func quicksort(arr: [var Int]): () {
     genericSort(arr, Int.compare);
   };
-
-}
+};
