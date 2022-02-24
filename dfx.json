@@ -2,18 +2,14 @@
   "version": 1,
   "dfx": "0.9.0",
   "canisters": {
-    "Lession2": {
+    "Lesson2": {
       "type": "motoko",
-      "main": "src/Lession2/main.mo"
+      "main": "src/Lesson2/main.mo"
     },
-    "Lession2_assets": {
+    "Lesson2_assets": {
       "type": "assets",
-      "source": [
-        "src/Lession2_assets/assets"
-      ],
-      "dependencies": [
-        "Lession2"
-      ]
+      "source": ["src/Lesson2_assets/assets"],
+      "dependencies": ["Lesson2"]
     }
   },
   "defaults": {
