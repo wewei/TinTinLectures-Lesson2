@@ -36,6 +36,7 @@ module {
     sortIn(0, arr.size());
   };
 
+  /// The in place quick sort for mutable Int array
   public func quicksort(arr: [var Int]): () {
     genericSort(arr, Int.compare);
   };
