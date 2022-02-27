@@ -1,0 +1,2 @@
+#!/bin/sh
+moc -r --package base `dfx cache show`/base src/Lesson2/QuickSortRun.mo
