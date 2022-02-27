@@ -1,5 +1,6 @@
 import Int "mo:base/Int";
 import Order "mo:base/Order";
+import List "mo:base/List";
 
 module {
   /// In place quick sort for mutable array
@@ -37,5 +38,24 @@ module {
   /// The in place quick sort for mutable Int array
   public func quicksort(arr: [var Int]): () {
     genericSort(arr, Int.compare);
+  };
+
+  // The functional quicksort for List
+  public func genericSortList<A>(list: List.List<A>, cmp: (A, A) -> Order.Order): List.List<A> {
+    switch list {
+      case null { null };
+      case (?(h, t)) {
+        let (listR, listL)  = List.partition<A>(t, func (x: A): Bool = Order.isGreater(cmp(x, h)));
+        List.append<A>(
+          genericSortList<A>(listL, cmp),
+          ?(h, genericSortList<A>(listR, cmp))
+        )
+      };
+    }
+  };
+
+  // The functional quicksort for List<Int>
+  public func quicksortList<A>(list: List.List<Int>): List.List<Int> {
+    genericSortList(list, Int.compare);
   };
 };
